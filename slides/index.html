@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>AcornHack Workshop – Learn to Code using Ruby (and sloths)</title>
+
+		<meta name="description" content="A coding/ruby introduction">
+		<meta name="author" content="Kriselda Rabino">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- START THE SLIDESHOW -->
+			<div class="slides">
+				<!-- TITLE PAGE -->
+				<section>
+					<h1>Learn To C&#10084;de</h1>
+					<h3>Using Ruby (and sloths)</h3>
+					<p>
+						<small>workshop by <a href="https://uk.linkedin.com/in/kriseldarabino">kriselda rabino</a><br />tweet me: <a href="http://twitter.com/krissygoround">@krissygoround</a></small>
+					</p>
+				</section>
+
+				<!-- INTRODUCTIONS -->
+				<section>
+					<section>
+						<h2>Before I introduce Ruby...</h2>
+						<br /><br />
+						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
+					</section>
+					<section>
+						<p>
+							Hi! I'm <b>Kriselda</b> or <b>Krissy</b> or <b>That Strange Lady Hovering Around the Food Table</b>.
+						</p>
+						<ul>
+							<li>I'm a Sydney-sider living in London for the last 5 years.</li>
+							<li>I love getting creative, especially with <b>writing</b> and <b>dance</b>; you'll find me teaching a type of Brazilian social dance two nights a week.</li>
+							<li>I have an unhealthy obsession with <b>sloths</b> and <b>bubble wrap</b>.</li>
+							<li>I used to be <strong>afraid of code</strong> but we made friends one day, and now I'm a <strong>software engineer</strong>.</li>
+						</ul>
+					</section>
+					<section>
+						<p><strong>Let's hear a little about you!</strong></p>
+					</section>
+				</section>
+
+				<!-- WHAT'S RUBY? -->
+				<section>
+					<section>
+						<h2>So, who's this Ruby kid anyway?</h2>
+						<br /><br />
+						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
+					</section>
+					<section>
+						<p>Ruby is a <strong>programming language</strong> (like Python or PHP) that helps humans and machines communicate with each other.</p>
+					</section>
+					<section>
+						<p>It was created by a Japanese guy called Yukihiro Matsumoto. A guy so cool we all know him as "Matz". His aim is to provide a beautiful, readable language that makes programmers happy.</p>
+						<img data-src="img/matzquote1.jpg" alt="Down arrow">
+					</section>
+					<section>
+						<h3>Some common words you'll notice if you google "Ruby":</h3>
+						<ul>
+							<li>It's a <strong>high-level</strong> language (humans can read it good)
+							<li>It's <strong>object-oriented</strong> (we'll go over this in a bit)</li>
+							<li>It's <strong>dynamic</strong> (we won't have time to go over this but if you're curious after this, google the difference between static v dynamic languages)
+							<li>It's super <strong>flexible</strong> compared to other languages. Like marmite - people either love or hate this</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Is Ruby the same as Ruby On Rails?</h3>
+						<p>This is a very common misconception when first exploring the Ruby world.</p>
+						<p>An important thing to note about programming is a lot of people face the same problems every day, so programs have been built to help each other achieve these common tasks.</p>
+						<p><a href="http://rubyonrails.org">Rails</a> is a popular <strong>web framework</strong> made using the Ruby language. It provides the essential building blocks to create a modern web application.</p>
+					</section>
+					<section>
+						<h3>And finally, gems?</h3>
+						<p>As above, a good programmer tries not to reinvent the wheel. Ruby devs can choose to share their programs with the <a href="https://opensource.com/resources/what-open-source">open source</a> community by packaging up their programs into little reusable libraries called "gems". These can be installed by anyone to use on their machines or in their own programs.</p>
+					</section>
+				</section>
+
+				<!-- WHAT'S A PROGRAM? -->
+				<section>
+					<section>
+						<h2>OK then, what's a program?</h2>
+						<br /><br />
+						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
+					</section>
+					<section>
+						<p>A program is something written to solve problems, make cool things or email everyone daily sloth GIFs. It reads like a set of instructions and ingredients/parts just like a recipe or manual.</p>
+					</section>
+					<section>
+						<p>Computers are much less smarter than humans, so in order to communicate with them we need to keep things straight forward, broken down and obvious. This is why we need programming languages.</p>
+					</section>
+					<section>
+						<p>It's sort of like when your parents ask you to "help around the house". What does that even mean? It's only when they're standing right in front of you an hour later hands on hips saying "Take out this bag of rubbish". That's when the action happens, right?<br /><br />
+						 (OK, maybe that was just me then.)</p>
+					</section>
+				</section>
+
+				<!-- PLAYING WITH RUBY -->
+				<section>
+					<section>
+						<h2>Playing With Ruby</h2>
+						<br /><br />
+						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
+					</section>
+					<section>
+						<p>Good news! We won't need to fiddle around with any setup for the sake of this workshop as we'll be using the handy website <a href="http://tryruby.org/">tryruby.org</a> to play around. For reference, let's quickly go over what you'd usually have to do to get started coding with Ruby.</p>
+					</section>
+					<section>
+						<h3>Setting up Ruby on your machine</h3>
+						<p>There are different ways to install Ruby depending on your machine. If you're on a Mac, it comes with Ruby pre-installed, however, this is usually an older version and you're better off installing it fresh anyway. You can find out how to install Ruby via the <a href="https://www.ruby-lang.org/en/downloads/" target="_blank">official site</a>.</p>
+					</section>
+					<section>
+						<h3>The Interactive Ruby Shell (IRB)</h3>
+						<ul>
+							<li>Firstly, say hi to your new minimalistic yet friendly home: <strong>The Command Line!</strong> We'll be working in here a lot. Remember, anything new always feels alien so if you feel a bit intimidated by it, just be assured you'll soon be in here enough for it to feel totally natural.</li>
+							<li>IRB is a nice little interactive shell (type of user interface) that understands and interprets Ruby. To access it, open up your machine's command prompt/terminal and type in: <code>irb</code></li>
+							<li>The <a href="http://tryruby.org">tryruby.org</a> site basically provides us with this same space online in our browser, so let's switch to there now.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Type something. Experiment! Some things to try:</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+	> # Some maths. (Free calculator? Score!)
+	> # Any line starting with a # is a comment btw.
+	> # This is for humans only, which means you can pretty
+	> # much type anything you want. Like "SLOTH".
+	>
+	> 2 * 5
+		=> 10
+	> 30 / 3
+		=> 10
+	> 32.even?
+		=> true
+	> 32.odd?
+		=> false
+	>
+	> # Some words?
+	>
+	> krissy
+		=> irb(main):001:0> krissy
+NameError: undefined local variable or method `krissy' for main:Object
+	> "hi, Krissy"
+		=> "hi, krissy"
+	> 'Krissy'
+		=> 'Krissy'
+	> "Krissy".upcase
+		=> "KRISSY"
+						</code></pre>
+					</section>
+				</section>
+
+				<!-- ERRORS -->
+				<section>
+					<section>
+						<h2>Mistakes are inevitable; accept them, embrace them. (aka Errors are your new BFF)</h2>
+						<br /><br />
+						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
+					</section>
+					<section>
+						<p>FACT: If you're going to like coding, you need to accept that things will go wrong about 90% of the time before they go right. It's normal and it's totally OK.</p>
+					</section>
+				</section>
+
+				<!-- OOP -->
+				<section>
+					<section>
+						<h2>What does 'Object-Oriented' mean? How to think in things and classes.</h2>
+						<br /><br />
+						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
+					</section>
+					<section>
+						<p></p>
+					</section>
+				</section>
+
+				<!-- Data Types -->
+				<section>
+					<section>
+						<h2>Ruby's basic data types: numbers and strings and arrays, oh my!</h2>
+						<br /><br />
+						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
+					</section>
+					<section>
+						<p></p>
+					</section>
+				</section>
+
+				<!-- Methods -->
+				<section>
+					<section>
+						<h2>Methods and madness.</h2>
+						<br /><br />
+						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
+					</section>
+					<section>
+						<p></p>
+					</section>
+				</section>
+
+				<!-- Variables -->
+				<section>
+					<section>
+						<h2>variables = "super handy"</h2>
+						<br /><br />
+						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
+					</section>
+					<section>
+						<p></p>
+					</section>
+				</section>
+
+				<!-- Conditional statements -->
+				<section>
+					<section>
+						<h2>Decisions, decisions. Conditional Statements are here to help.</h2>
+						<br /><br />
+						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
+					</section>
+					<section>
+						<p></p>
+					</section>
+				</section>
+
+				<!-- Loops -->
+				<section>
+					<section>
+						<h2>Iterating over collections (now it's getting a bit loopy)</h2>
+						<br /><br />
+						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
+					</section>
+					<section>
+						<p></p>
+					</section>
+				</section>
+
+				<!-- Exercise -->
+				<section>
+					<section>
+						<h2>Your turn! Let's make some code.</h2>
+						<br /><br />
+						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
+					</section>
+					<section>
+						<h3>Your first method</h3>
+						<ol>
+							<li>Create a method named <code>speak</code> that prints out "Oh hai world" when you call it.</li>
+							<li>Pass through an argument to your method that represents an <code>animal</code></li>
+							<li>Print out "Oh hai world" and mention the animal who said it. e.g.  output
+								<pre>
+"Bear: Oh hai, world!"
+								</pre>
+							</li>
+						</ol>
+					</section>
+					<section>
+						<h3>And try these!</h3>
+						<ol>
+							<li>Pass through a group of animals rather than just one, and print out the same sentence for each animal on a new line each (hint: use an array and loop!) e.g output
+								<pre>
+Bear: Oh hai world
+Sloth: Oh hai world
+Fish: Oh hai world
+								</pre>
+							</li>
+							<li>Do the same as above, but add a Conditional Statement (<code>if/else</code>) so it prints out "Ohhhh haiiii worldddd" if the animal is a sloth</li>
+
+						</ol>
+					</section>
+					<section>
+						<h3>Bonus challenge!</h3>
+						<ol>
+							<li>Add an extra argument, "sentence" to the method so the animals can say whatever you like</li>
+							<li>If the animal is a sloth, print your custom sentence with all the words said much slower like a sloth would say them (i.e. make the words longer by repeating the last letter of each word), E.g. <code>"Sloth: Rubyyyy issss neatttt"</code></li>
+						</ol>
+						<p><em>(Hint: Google is there as a great reference to help you code - start using it! There are several things to think about here - break the problem down into single steps. Firstly, how would you split a sentence up into a group of words? Then how do you something to change each word? How do you extend the word?)</em></p>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
