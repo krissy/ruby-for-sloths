@@ -47,6 +47,10 @@
 					<p>
 						<small>workshop by <a href="https://uk.linkedin.com/in/kriseldarabino">kriselda rabino</a><br />tweet me: <a href="http://twitter.com/krissygoround">@krissygoround</a></small>
 					</p>
+					<br /><br />
+					<p>
+						<small><em>This slide deck is made with <a href="https://github.com/krissy/ruby-for-sloths">open source code</a> thanks to the awesome folk at <a href="http://lab.hakim.se/reveal-js/#/">revealJS</a>.</em></small>
+					</p>
 				</section>
 
 				<!-- INTRODUCTIONS -->
@@ -84,7 +88,7 @@
 					</section>
 					<section>
 						<p>It was created by a Japanese guy called Yukihiro Matsumoto. A guy so cool we all know him as "Matz". His aim is to provide a beautiful, readable language that makes programmers happy.</p>
-						<img data-src="img/matzquote1.jpg" alt="Down arrow">
+						<img data-src="img/matzquote1.jpg" alt="Matz">
 					</section>
 					<section>
 						<h3>Some common words you'll notice if you google "Ruby":</h3>
@@ -150,45 +154,95 @@
 					</section>
 					<section>
 						<h3>Type something. Experiment! Some things to try:</h3>
-						<pre><code class="hljs" data-trim contenteditable>
-	> # Some maths. (Free calculator? Score!)
-	> # Any line starting with a # is a comment btw.
-	> # This is for humans only, which means you can pretty
-	> # much type anything you want. Like "SLOTH".
-	>
-	> 2 * 5
-		=> 10
-	> 30 / 3
-		=> 10
-	> 32.even?
-		=> true
-	> 32.odd?
-		=> false
-	>
-	> # Some words?
-	>
-	> krissy
-		=> irb(main):001:0> krissy
+						<pre><code class="ruby" data-trim>
+# Some maths. (Free calculator? Score!)
+# Any line starting with a # is a comment btw.
+# This is for humans only, which means you can pretty
+# much type anything you want. Like "SLOTH".
+
+2 * 5
+	=> 10
+30 / 3
+	=> 10
+32.even?
+	=> true
+32.odd?
+	=> false
+>
+# Some words?
+>
+krissy
+	=> irb(main):001:0> krissy
 NameError: undefined local variable or method `krissy' for main:Object
-	> "hi, Krissy"
-		=> "hi, krissy"
-	> 'Krissy'
-		=> 'Krissy'
-	> "Krissy".upcase
-		=> "KRISSY"
+"hi, Krissy"
+	=> "hi, krissy"
+'Krissy' * 3
+	=> 'KrissyKrissyKrissy'
+"Krissy".upcase
+	=> "KRISSY"
 						</code></pre>
+					</section>
+
+					<section>
+						<h3>Working with Ruby (.rb) files</h3>
+						<p>It can get a bit tedious sending one line of code each time in an IRB session. Once you have ruby installed, you can also save your code in any file with the .rb extension, navigate to its containing folder in your command prompt/terminal and type <code>ruby {filename}</code> to run it. E.g. <code>ruby sloth.rb</code>.</p>
+
+						<small>My file sloth.rb:</small><br />
+						<img data-src="img/rubycode_file.png" alt="sloth.rb file">
+						<br />
+						<small>Calling it on the command line:</small><br />
+						<img data-src="img/rubycode_output.png" alt="Ruby output">
 					</section>
 				</section>
 
 				<!-- ERRORS -->
 				<section>
 					<section>
-						<h2>Mistakes are inevitable; accept them, embrace them. (aka Errors are your new BFF)</h2>
+						<h2>Mistakes are inevitable; accept them, embrace them. (aka Exceptions are your new BFF)</h2>
 						<br /><br />
 						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
 					</section>
 					<section>
-						<p>FACT: If you're going to like coding, you need to accept that things will go wrong about 90% of the time before they go right. It's normal and it's totally OK.</p>
+						<h3>Fact</h3>
+						<p>If you're going to enjoy your coding journey, you need to accept that things will go wrong about 90% of the time before they go right. It's normal and it's totally OK.</p>
+
+						<img data-src="img/mistakes.png" alt="Mistakes are portals of discovery - James Joyce">
+					</section>
+					<section>
+						<h3>How Ruby handles errors</h3>
+						<p>If you were being adventurous, you probably saw something like this gobbledy gook come up in your interactive ruby session:</p>
+
+						<img data-src="img/error_zerodivision.png" alt="ZeroDivisionError">
+						<br />
+						<img data-src="img/error_nomethod.png" alt="NoMethodError">
+
+						<p>
+							These messages are called "Exceptions". Exceptions are Ruby's way of letting you know something's not right and where the problem might lie.
+						</p>
+					</section>
+
+					<section>
+						<h3>Some exception examples</h3>
+						<ul>
+							<li><strong>NoMethodError:</strong> You've tried to make a thing do something it doesn't know how to do.</li>
+							<li><strong>SyntaxError:</strong> You've probably missed a bracket somewhere or typed something Ruby just doesn't understand.</li>
+						</ul>
+						<p>Usually the exception will point to the line it doesn't quite get which is very helpful when your codebase starts to get large!</p>
+					</section>
+
+					<section>
+						<h3>You can even create your own error types!</h3>
+
+						<img data-src="img/customerror_code.png" alt="Some ruby code">
+						<br />
+						<small>The output:</small><br />
+						<img data-src="img/customerror_output.png" alt="The output">
+					</section>
+
+					<section>
+						<p>They may look intimidating, but the fact is: <strong>Exceptions are your new BFFs!</strong></p>
+						<p>(Those brutally honest kinds of friends that tell you you've got food in your teeth, and point to the exact tooth.)</p>
+						<p>Welcome their advice. They're here to help you out.</p>
 					</section>
 				</section>
 
@@ -200,7 +254,153 @@ NameError: undefined local variable or method `krissy' for main:Object
 						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
 					</section>
 					<section>
+						<h3>This is Craig, my nanoblock sloth</h3>
+						<p>(If you haven't heard of them, nanoblocks are like Lego but cooler... except for people with gigantic hands.)</p>
+						<img data-src="img/craig_the_object.jpg" alt="Craig, the object">
 						<p></p>
+					</section>
+
+					<section>
+						<h3>This was Craig before he was a thing.</h3>
+						<p>In fact, he wasn't even Craig back then. He was just a generic set of instructions with a bunch of sloth-like specs.</p>
+						<img data-src="img/craig_the_class.jpg" alt="Craig, the class">
+						<p></p>
+					</section>
+
+					<section>
+						<h3>In Ruby, everything is a kind of object or thing</h3>
+						<ul>
+							<li>As mentioned earlier, programming is like writing up a recipe or instruction manual to create a type of thing.</li>
+							<li>In Ruby, this set of instructions is called a <strong>Class</strong>. In Ruby, the topmost type of thing is the <strong>Object</strong> class. E.g. A Sloth is a type/class. It is a type of Animal. Both are a type of Object.</li>
+							<li>The actual thing you create when you "instantiate" a Class, i.e. the computer executes its instructions, is called an <strong>Instance</strong>. You can have many instances of the one class.</li>
+							<li>In our example: I am the computer, the NanoBlock manual is our Sloth class, and Craig is an instance of a Sloth!</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Methods and Madness</h3>
+						<p>So if we have these objects, which are basically nouns, what are the things they do (i.e. their verbs?). The rubyverse calls these Methods! You've been using methods heaps already, e.g. when you call <code class="ruby">"hello".reverse</code>, <strong>reverse</strong> is a method available in the String "hello". Let's create our own method now!</p>
+
+						<pre><code class="ruby">
+# Our method takes something called an "argument" in brackets, and uses that to get personal preferences from whoever/whatever called the method.
+def greet_like_a_sloth(name)
+	puts "Hai #{name}, I'mmmm aaaaa slothhhhh"
+end
+
+# Now try call your method!
+greet_like_a_sloth("Craig")
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>variables = "your personal assistants"</h3>
+						<p>It can get very repetitive having to write the same thing over and over again. Luckily, code is very good at making our lives a little easier and lazier. Variables are like little PAs you can rely on to remember all the details for you.</p>
+
+						<pre><code class="ruby">
+# Let's play around with a sentence
+"Haiiii, I'mmmm aaaa slothhhh".reverse
+"Haiiii, I'mmmm aaaa slothhhh".upcase
+
+# OK, I'm feeling a bit sick of typing now. Ooh, variable time!
+greeting = "Haiiii, I'mmmm aaaa slothhhh"
+greeting.reverse
+greeting.upcase
+
+# (Ah, so much better. I might as well go for a nap now.)
+
+# It's easy to change your mind, so it's great you can tell your variable
+# to remember something new as many times as you want.
+# And it won't roll its eyes at you!
+greeting = "Hai!"
+puts greeting
+greeting = "Hai again!"
+puts greeting
+
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Let's Explore</h3>
+						<p>You can find out what class or type any object is by calling the method <code>.class</code> on it.</p>
+						<p>Back in your IRB shell or tryruby.org, try enter the following and see what you get:</p>
+
+						<pre><code class="ruby">
+1.class
+"Hello".class
+"Hello".kind_of?(String)
+1.kind_of?(FixNum)
+2.kind_of?(String)
+
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>An Example Sloth Class</h3>
+						<p>In this workshop, we just want to give you an idea of what objects / classes are and will be playing around with Ruby's already built-in classes. But here's a simple example of what a Sloth class would look like if we were to write one.</p>
+
+						<pre><code class="ruby">
+# Let's make some classes!
+class Animal
+  def animal?
+    true
+  end
+
+  def eat
+    "Time to eat!"
+  end
+
+  def run
+    "Time to run!"
+  end
+end
+
+# A sloth is a type of animal
+class Sloth < Animal
+  # Attribute accessors are a quick way to create methods that read or set a value
+  attr_accessor :name, :limbs, :fur_colour
+
+  def initialize(name)
+    @name = name
+    @limbs = 4
+    @fur_colour = "grey"
+  end
+
+  # This will override the run method in our Animal class
+  def run
+    "I don't know how to do that!"
+  end
+end
+
+
+# Cool! Now we have our classes, let's make a real sloth instance!
+craig = Sloth.new("Craig")
+puts "Yay, we just created a new sloth, #{craig.name}!"
+
+# Now let's find out some things about Craig
+puts "Is #{craig.name} an animal?: " + craig.animal?.to_s
+puts "Let's make #{craig.name} eat: " + craig.eat
+puts "Let's make #{craig.name} run: " + craig.run
+puts "#{craig.name} has this many limbs: " + craig.limbs.to_s
+puts "#{craig.name}'s fur colour is: " + craig.fur_colour
+puts ""
+
+# Now let's see what happens if we create a new Animal instance and call run
+some_generic_animal = Animal.new
+puts "Ooh, we just created a new generic animal that's too generic to have a name."
+puts "Let's make our generic animal run: " + some_generic_animal.run
+
+
+# WHEN WE RUN THIS, IT OUTPUTS:
+# Yay, we just created a new sloth, Craig!
+# Is Craig an animal?: true
+# Let's make Craig eat: Time to eat!
+# Let's make Craig run: I don't know how to do that!
+# Craig has this many limbs: 4
+# Craig's fur colour is: grey
+
+# Ooh, we just created a new generic animal that's too generic to have a name.
+# Let's make our generic animal run: Time to run!
+						</code></pre>
 					</section>
 				</section>
 
@@ -212,31 +412,156 @@ NameError: undefined local variable or method `krissy' for main:Object
 						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
 					</section>
 					<section>
-						<p></p>
+						<h3>Ruby's Built-In Classes / Data Types</h3>
+						<p>So, you've already been playing with some of Ruby's built-in classes and handy tools. Here's a little overview of some common ones we'll use during this workshop.</p>
+						<ul>
+							<li>Numbers (integers, floats etc)</li>
+							<li>Strings (characters and words)</li>
+							<li>Booleans (i.e. true/false)</li>
+							<li>Symbols (labels)</li>
+							<li>Arrays (ordered lists of things)</li>
+						</ul>
 					</section>
-				</section>
+					<section>
+						<h3>Numbers</h3>
+						<p>Ruby can do handy stuff with numbers in the most obvious way. And knows some neat tricks too! Try some of these:</p>
 
-				<!-- Methods -->
-				<section>
-					<section>
-						<h2>Methods and madness.</h2>
-						<br /><br />
-						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
-					</section>
-					<section>
-						<p></p>
-					</section>
-				</section>
+						<pre><code class="ruby">
+10.class # Fixnum (an integer)
+10.5.class # Float (a decimal)
 
-				<!-- Variables -->
-				<section>
-					<section>
-						<h2>variables = "super handy"</h2>
-						<br /><br />
-						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
+10 + 5 # Arithmetic
+16 % 5 # Modulo / remainder
+5**2 # To the power of
+
+# You can use underscores to make long numbers easier to read.
+# Ruby knows to ignore them. It's nice and intuitive like that.
+1_000_000 + 10
+(1..5).class # These are handy classes of their own called Ranges!
+(1..5).include?(5)
+(1..5).max
+(1..5).min
+
+10.5.to_i # Make a float an integer
+10.odd? # Is this an odd number?
+10.methods # Check out all the things we can call!
+						</code></pre>
 					</section>
+
 					<section>
-						<p></p>
+						<h3>Strings</h3>
+						<p>Strings are code-speak for any value that consists of text or characters. Ruby interprets anything in single or double quotes a string. Let's test this out!</p>
+
+						<pre><code class="ruby">
+# You can use single or double quotes for simple text phrases and no one will yell at you.
+# (Just try your best to be consistent!)
+
+"Hai, I'm Craig.".class
+"42".class
+
+puts "prints a string and a new line"
+print "prints a string with no new line"
+
+'Hai, I\'m Craig.' # The backslash "escapes" the apostrophe so we don't get it mixed up with a closing quote
+# You have to use double quotes when Ruby needs to do something a bit clever
+"Two plus one is #{2 + 1}"
+
+# String arithmetic?
+"2" + "1" # 21
+"Connect" + "These" # ConnectThese
+"Sloth" * 3 # SlothSlothSloth
+"2" + 1 # Should raise a TypeError
+
+"How long am I?".length
+"Reverse me".reverse
+"Make this all uppercase".upcase
+"capitalize me".capitalize
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Booleans</h3>
+						<p>Booleans are a way of checking if something is true or false. A simple but regularly needed check in the world of code.</p>
+
+						<pre><code class="ruby">
+true.class # TrueClass
+false.class # FalseClass
+
+# Common operators, all examples return true
+5 == 5 # Equal to
+5 != 10 # Not equal to
+5 4 # Greater than
+5 >= 5 # Greater than or equal to
+4 < 5 # Less than
+5 <= 5 # Less than or equal to
+(1..10) === 5 # Does 5 fall in this range?
+
+# Comparison (AND/OR), all examples return true
+5 == 5 && 5 > 4 # AND, i.e. all are true
+5 == 5 || 3 > 4 # OR, i.e. at least one is true
+
+# Being negative, use an !
+!(5 == 4) # True
+
+# Methods ending in ? indicate a true/false answer
+1.odd? # True
+1.even? # False
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Symbols</h3>
+						<p>Symbols are handy to use for text values that label or identify something and won't change. You can tell a difference between a String and a Symbol as it's prefixed with a colon.</p>
+
+						<pre><code class="ruby">
+:sloth.class
+:sloth.capitalize
+:sloth.to_s # convert it to a String
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Arrays</h3>
+						<p>Sometimes it's not all about sloths (really?!) and you need to deal with a bunch of other things too. This is where Collections come in. One common type is an Array, which is an ordered list of things. Let's get listing!</p>
+
+						<pre><code class="ruby">
+> ["sloth", "bear", "octopus"].class
+
+# Numbers
+[1, 2, 3, 4, 5]
+(1..5).to_a # Convert this range to an array
+
+# Strings
+["sloth", "bear", "octopus"]
+%w(sloth bear octopus)
+"I am a string".split
+
+# Symbols
+[:sloth, :bear, :octopus]
+%i(sloth bear octopus)
+
+# Reading stuff
+[:sloth, :bear, :octopus] # Check the first thing in the array
+[:sloth, :bear, :octopus].first
+[:sloth, :bear, :octopus][1] # Check the second thing
+[:sloth, :bear, :octopus][-1] # Check the last thing
+
+# Adding stuff (push!)
+[:sloth, :bear, :octopus].push(:penguin)
+[:sloth, :bear, :octopus] << :penguin
+
+# Removing stuff  (pop!)
+[:sloth, :bear, :octopus].pop(:octopus)
+
+# Printing an array as a String, use join
+puts ["I", "am", "a", "sloth"].join(" ") # I am a sloth
+puts ["I", "am", "a", "sloth"].join("-") # I-am-a-sloth
+
+# Other things
+[].empty?
+[:sloth, :bear, :octopus].length
+[:sloth, :bear, :octopus].shuffle
+						</code></pre>
 					</section>
 				</section>
 
@@ -248,7 +573,33 @@ NameError: undefined local variable or method `krissy' for main:Object
 						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
 					</section>
 					<section>
-						<p></p>
+						<p>Life is full of hard decisions, some harder than others like whether you feel like pizza or noodles tonight. In this respect, programming is exactly like life.</p>
+						<img data-src="img/slothilda.gif" width="350" alt="Slothilda and decisions">
+					</section>
+					<section>
+						<h3>Conditionals!</h3>
+						<p>When we make decisions, our new Boolean friends steal the show. They're used in conjunction with things called <strong>if/else</strong> statements and other neat little decision-making tools.</p>
+						<pre><code class="ruby">
+# Let's update our greet method from earlier to be more decisive.
+def greet_like_an_animal(name, animal)
+	if animal == :sloth
+		puts "Hai #{name}, I'mmmm aaaaa slothhhhh"
+	elsif animal == :octopus
+		puts "Hai #{name}, I'm (bubble) a (bubble) octopus!"
+	else
+		puts "Hai #{name}, I'm a #{animal.to_s}"
+	end
+end
+
+# Now try call your method!
+greet_like_an_animal("Craig", :sloth)
+greet_like_an_animal("Craig", :octopus)
+greet_like_an_animal("Craig", :bear)
+
+# Some other checks
+# Unless
+puts "Hello" unless 1 == 1 # This will return 'nil' which is ruby's version of nothingness
+						</code></pre>
 					</section>
 				</section>
 
@@ -260,7 +611,53 @@ NameError: undefined local variable or method `krissy' for main:Object
 						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
 					</section>
 					<section>
-						<p></p>
+						<p>Back to loving the lazy life, the maple syrup on the delicious stack of pancakes we called "Collections" come in the form of Loops aka Iterators. With these powers combined, we can do a bazillion things in one or a couple of lines. Yay!</p>
+					</section>
+
+					<section>
+						<h3>Loops</h3>
+						<p>So imagine we were really obsessed with someone, or a specific kind of slow creature, and we wanted to let them know with a hundred declarations of love.
+						<pre><code class="ruby">
+puts "1. I really, really like you. Be mine?"
+puts "2. I really, really like you. Be mine?"
+puts "3. I really, really like you. Be mine?"
+
+# Ok, that's getting tiresome... how about a for loop?
+
+for count in 1..100 do
+	puts count.to_s + ". I really, really like you. Be mine?"
+end
+
+# Smooth. We could also write these like so:
+
+100.times do |count|
+	count = count + 1
+	puts count.to_s + ". I really, really like you. Be mine?"
+end
+
+# Or like:
+
+1.upto(100){ |count| puts count.to_s + ". I really, really like you. Be mine?" }
+
+# Or even:
+
+count = 0
+while count < 100
+	count += 1 # shortcut way of saying count = count + 1
+	puts count.to_s + ". I really, really like you. Be mine?"
+end
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Using "each"</h3>
+						<p>So as you can see, there are many ways to do the same thing. Ruby lets you take your pick and as mentioned earlier, coders either love or hate this freedom. (I'm on the love side!). Ruby peeps tend to use some ways more than others. The most popular way of looping is by using the <code>each</code> method on a collection (as well as some other useful methods from a nifty class called Enumerable)</p>
+						<pre><code class="ruby">
+awesome_animals = ["sloth", "dugong", "koala"]
+awesome_animals.each do |animal|
+	puts "#{animal}s rock!"
+end
+						</code></pre>
 					</section>
 				</section>
 
@@ -272,10 +669,15 @@ NameError: undefined local variable or method `krissy' for main:Object
 						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
 					</section>
 					<section>
+						<p><strong>Congrats!</strong> You've made it speedily, in a very non-sloth-like fashion, to the end of this workshop! We've covered a bunch of topics and I don't expect you to be comfortable with all or any of them right now. The point of this to get a taster for ruby, coding and a new logical way of thinking you can apply anywhere, even outside of a code editor.</p>
+						<p>
+							I added a lot more detail to the slides than necessary for this workshop so you have a handy basic reference to come back to. We'll end with some practice exercises we can do together now or you can tackle in your own time. If you have any questions about ruby/coding, working in tech, sloths or anything else, please throw them my way. Otherwise, <strong>happy hacking</strong>! :)
+					</section>
+					<section>
 						<h3>Your first method</h3>
 						<ol>
-							<li>Create a method named <code>speak</code> that prints out "Oh hai world" when you call it.</li>
-							<li>Pass through an argument to your method that represents an <code>animal</code></li>
+							<li>Create a method named <code class="ruby">speak</code> or something you feel fits, that prints out "Oh hai world" when you call it.</li>
+							<li>Pass through an argument to your method that represents an <code class="ruby">animal</code></li>
 							<li>Print out "Oh hai world" and mention the animal who said it. e.g.  output
 								<pre>
 "Bear: Oh hai, world!"
@@ -303,7 +705,19 @@ Fish: Oh hai world
 							<li>Add an extra argument, "sentence" to the method so the animals can say whatever you like</li>
 							<li>If the animal is a sloth, print your custom sentence with all the words said much slower like a sloth would say them (i.e. make the words longer by repeating the last letter of each word), E.g. <code>"Sloth: Rubyyyy issss neatttt"</code></li>
 						</ol>
-						<p><em>(Hint: Google is there as a great reference to help you code - start using it! There are several things to think about here - break the problem down into single steps. Firstly, how would you split a sentence up into a group of words? Then how do you something to change each word? How do you extend the word?)</em></p>
+						<p><em>(Hint: There are several things to think about here - break the problem down into single steps. Firstly, how would you split a sentence up into a group of words? Then how do you something to change each word? How do you extend the word? Use the slides, Google or a friendly fellow human to help you out if you're stuck!)</em></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Obligatory sloth GIF.</h2>
+						<br /><br />
+						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
+					</section>
+					<section>
+						<h3>Code brain explosion!</h3>
+						<img data-src="img/fascinating_sloth.gif" alt="Code is fascinating">
 					</section>
 				</section>
 			</div>
