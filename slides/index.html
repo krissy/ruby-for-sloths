@@ -279,10 +279,11 @@ NameError: undefined local variable or method `krissy' for main:Object
 
 					<section>
 						<h3>Methods and Madness</h3>
-						<p>So if we have these objects, which are basically nouns, what are the things they do (i.e. their verbs?). The rubyverse calls these Methods! You've been using methods heaps already, e.g. when you call <code class="ruby">"hello".reverse</code>, <strong>reverse</strong> is a method available in the String "hello". Let's create our own method now!</p>
+						<p>So if we have these objects, which are basically nouns, what are the things they do (i.e. their verbs)?. The rubyverse calls these: <strong>Methods</strong>! You've been using methods heaps already, e.g. when you called <code class="ruby">"hello".reverse</code>, <strong>reverse</strong> is a method available in the String object "hello". Let's create our own method now.</p>
 
 						<pre><code class="ruby">
-# Our method takes something called an "argument" in brackets, and uses that to get personal preferences from whoever/whatever called the method.
+# Our method takes something called an "argument" in brackets, and uses
+# that to get personal preferences from whoever/whatever called the method.
 def greet_like_a_sloth(name)
 	puts "Hai #{name}, I'mmmm aaaaa slothhhhh"
 end
@@ -308,8 +309,8 @@ greeting.upcase
 
 # (Ah, so much better. I might as well go for a nap now.)
 
-# It's easy to change your mind, so it's great you can tell your variable
-# to remember something new as many times as you want.
+# It's easy to change your mind, so it's great you can tell your
+# variable to remember something new as many times as you want.
 # And it won't roll its eyes at you!
 greeting = "Hai!"
 puts greeting
@@ -453,7 +454,8 @@ puts "Let's make our generic animal run: " + some_generic_animal.run
 						<p>Strings are code-speak for any value that consists of text or characters. Ruby interprets anything in single or double quotes a string. Let's test this out!</p>
 
 						<pre><code class="ruby">
-# You can use single or double quotes for simple text phrases and no one will yell at you.
+# You can use single or double quotes for simple
+# text phrases and no one will yell at you.
 # (Just try your best to be consistent!)
 
 "Hai, I'm Craig.".class
@@ -462,8 +464,12 @@ puts "Let's make our generic animal run: " + some_generic_animal.run
 puts "prints a string and a new line"
 print "prints a string with no new line"
 
-'Hai, I\'m Craig.' # The backslash "escapes" the apostrophe so we don't get it mixed up with a closing quote
-# You have to use double quotes when Ruby needs to do something a bit clever
+# A backslash "escapes" special characters, like this apostrophe
+# so we don't get it mixed up with a closing quote
+'Hai, I\'m Craig.'
+
+# You have to use double quotes when Ruby needs to
+# do something a bit clever
 "Two plus one is #{2 + 1}"
 
 # String arithmetic?
@@ -669,9 +675,10 @@ end
 						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
 					</section>
 					<section>
-						<p><strong>Congrats!</strong> You've made it speedily, in a very non-sloth-like fashion, to the end of this workshop! We've covered a bunch of topics and I don't expect you to be comfortable with all or any of them right now. The point of this to get a taster for ruby, coding and a new logical way of thinking you can apply anywhere, even outside of a code editor.</p>
+						<p><strong>Congrats!</strong> You've made it speedily, in a very non-sloth-like fashion, to the end of this workshop! We've covered a bunch of topics and I don't expect you to be comfortable with all or any of them right now. The point of this is to get a taster for ruby, coding and understand it's not rocket science (most of the time) and a lot more about solving puzzles, organizing yourself and making an infinite world of ideas come to life.</p>
 						<p>
 							I added a lot more detail to the slides than necessary for this workshop so you have a handy basic reference to come back to. We'll end with some practice exercises we can do together now or you can tackle in your own time. If you have any questions about ruby/coding, working in tech, sloths or anything else, please throw them my way. Otherwise, <strong>happy hacking</strong>! :)
+						</p>
 					</section>
 					<section>
 						<h3>Your first method</h3>
