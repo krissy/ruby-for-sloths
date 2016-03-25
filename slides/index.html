@@ -92,22 +92,49 @@
 					</section>
 					<section>
 						<h3>Some common words you'll notice if you google "Ruby":</h3>
-						<ul>
+
+						<table>
+							<tr>
+								<td width="40%">It's used on the <strong>back-end</strong></td>
+								<td>Alongside a server and a database, as opposed to "front-end" browser-based languages like HTML, CSS and JavaScript.</td>
+							</tr>
+							<tr>
+								<td>It's a <strong>high-level</strong> language</td>
+								<td>Humans can read it good.</td>
+							</tr>
+							<tr>
+								<td>It's <strong>object-oriented</strong></td>
+								<td>Everything is an object. We'll go over this in a bit.</td>
+							</tr>
+							<tr>
+								<td>It's <strong>dynamic</strong> and <strong>strongly</strong> typed</td>
+								<td>This is to do with how we create certain types of things and make different types of things talk to each other. We won't have time to go over this but if you're curious, google the difference between Static v Dynamic and Strong v Weak languages later on.</td>
+							</tr>
+							<tr>
+								<td>It's super <strong>flexible</strong></td>
+								<td> Compared to other languages. Like marmite - people either love or hate this.</td>
+							</tr>
+						</table>
+
+						<!-- <ul>
+							<li>It's used on the <strong>"back-end"</strong> alongside a server and a database (as opposed to "front-end" browser-based languages like HTML, CSS and JavaScript)
 							<li>It's a <strong>high-level</strong> language (humans can read it good)
 							<li>It's <strong>object-oriented</strong> (we'll go over this in a bit)</li>
-							<li>It's <strong>dynamic</strong> (we won't have time to go over this but if you're curious after this, google the difference between static v dynamic languages)
+							<li>It's <strong>dynamic</strong> and <strong>strongly</strong> typed (this is to do with how we create certain types of things and make different types of things talk to each other. We won't have time to go over this but if you're curious, google the difference between Static v Dynamic and Strong v Weak languages later on)
 							<li>It's super <strong>flexible</strong> compared to other languages. Like marmite - people either love or hate this</li>
-						</ul>
+						</ul> -->
 					</section>
 					<section>
 						<h3>Is Ruby the same as Ruby On Rails?</h3>
 						<p>This is a very common misconception when first exploring the Ruby world.</p>
 						<p>An important thing to note about programming is a lot of people face the same problems every day, so programs have been built to help each other achieve these common tasks.</p>
-						<p><a href="http://rubyonrails.org">Rails</a> is a popular <strong>web framework</strong> made using the Ruby language. It provides the essential building blocks to create a modern web application.</p>
+						<p><a href="http://rubyonrails.org">Rails</a> is a popular <strong>web framework</strong> made using the Ruby language. It provides the essential building blocks to create a modern web application. Some popular sites built with Rails include <a href="http://www.github.com">Github</a>, <a href="http://www.airbnb.com">Airbnb</a> and <a href="http://www.soundcloud.com">SoundCloud</a>.</p>
 					</section>
 					<section>
 						<h3>And finally, gems?</h3>
-						<p>As above, a good programmer tries not to reinvent the wheel. Ruby devs can choose to share their programs with the <a href="https://opensource.com/resources/what-open-source">open source</a> community by packaging up their programs into little reusable libraries called "gems". These can be installed by anyone to use on their machines or in their own programs.</p>
+						<p>As above, a good programmer tries not to reinvent the wheel. Ruby devs can choose to share their programs with the <a href="https://opensource.com/resources/what-open-source">open source</a> community by packaging up their programs into little reusable libraries called "gems". These can be installed by anyone to use on their machines or in their own programs. You can search for gems (including our friend, Rails) up on the gem hosting service <a href="https://rubygems.org/">RubyGems</a>.
+
+						</p>
 					</section>
 				</section>
 
@@ -122,11 +149,12 @@
 						<p>A program is something written to solve problems, make cool things or email everyone daily sloth GIFs. It reads like a set of instructions and ingredients/parts just like a recipe or manual.</p>
 					</section>
 					<section>
-						<p>Computers are much less smarter than humans, so in order to communicate with them we need to keep things straight forward, broken down and obvious. This is why we need programming languages.</p>
+						<p>Computers are not as smart as humans (yet!), so in order to communicate with them we need to keep things straight forward, broken down and obvious. This is why we need programming languages.</p>
 					</section>
 					<section>
-						<p>It's sort of like when your parents ask you to "help around the house". What does that even mean? It's only when they're standing right in front of you an hour later hands on hips saying "Take out this bag of rubbish". That's when the action happens, right?<br /><br />
-						 (OK, maybe that was just me then.)</p>
+						<p>It's sort of like when your parents, spouse or flatmate ask you to "help around the house" - What does that even mean?</p>
+						<p>It's only when they're standing right in front of you an hour later, hands on hips saying "This bag of rubbish. You. Take it outside!". That's when the action happens, right?</p>
+						<img data-src="img/akeem.jpg" width="500" alt="When you think of rubbish, think of weird programming analogies">
 					</section>
 				</section>
 
@@ -253,6 +281,76 @@ NameError: undefined local variable or method `krissy' for main:Object
 						<br /><br />
 						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
 					</section>
+
+						<section>
+						<h3>An Example Sloth Class</h3>
+						<p style="font-size: 0.7em">Here's a burst of code. Don't worry, it's as scared of you as you are of it. ;) If you have ruby installed, spend the next 10 minutes typing it up yourself (resist the urge to copy and paste!) in a file called <code>sloth.rb</code>. Save it in a directory of your choice. On the command line, type <code>ruby sloth.rb</code> in the same directory to run it. If you don't have ruby installed yet, just have a good read-through.</p>
+
+						<pre><code class="ruby">
+# Let's make some classes!
+class Animal
+  def animal?
+    true
+  end
+
+  def eat
+    "Time to eat!"
+  end
+
+  def run
+    "Time to run!"
+  end
+end
+
+# A sloth is a type of animal
+class Sloth < Animal
+  # Attribute accessors are a quick way to create methods that read or set a value
+  attr_accessor :name, :limbs, :fur_colour
+
+  def initialize(name)
+    @name = name
+    @limbs = 4
+    @fur_colour = "grey"
+  end
+
+  # This will override the run method in our Animal class
+  def run
+    "I don't know how to do that!"
+  end
+end
+
+
+# Cool! Now we have our classes, let's make a real sloth instance!
+craig = Sloth.new("Craig")
+puts "Yay, we just created a new sloth, #{craig.name}!"
+
+# Now let's find out some things about Craig
+puts "Is #{craig.name} an animal?: " + craig.animal?.to_s
+puts "Let's make #{craig.name} eat: " + craig.eat
+puts "Let's make #{craig.name} run: " + craig.run
+puts "#{craig.name} has this many limbs: " + craig.limbs.to_s
+puts "#{craig.name}'s fur colour is: " + craig.fur_colour
+puts ""
+
+# Now let's see what happens if we create a new Animal instance and call run
+some_generic_animal = Animal.new
+puts "Ooh, we just created a new generic animal that's too generic to have a name."
+puts "Let's make our generic animal run: " + some_generic_animal.run
+
+
+# WHEN WE RUN THIS, IT OUTPUTS:
+# Yay, we just created a new sloth, Craig!
+# Is Craig an animal?: true
+# Let's make Craig eat: Time to eat!
+# Let's make Craig run: I don't know how to do that!
+# Craig has this many limbs: 4
+# Craig's fur colour is: grey
+
+# Ooh, we just created a new generic animal that's too generic to have a name.
+# Let's make our generic animal run: Time to run!
+						</code></pre>
+					</section>
+
 					<section>
 						<h3>This is Craig, my nanoblock sloth</h3>
 						<p>(If you haven't heard of them, nanoblocks are like Lego but cooler... except for people with gigantic hands.)</p>
@@ -332,75 +430,6 @@ puts greeting
 1.kind_of?(Fixnum)
 2.kind_of?(String)
 
-						</code></pre>
-					</section>
-
-					<section>
-						<h3>An Example Sloth Class</h3>
-						<p>In this workshop, we just want to give you an idea of what objects / classes are and will be playing around with Ruby's already built-in classes. But here's a simple example of what a Sloth class would look like if we were to write one.</p>
-
-						<pre><code class="ruby">
-# Let's make some classes!
-class Animal
-  def animal?
-    true
-  end
-
-  def eat
-    "Time to eat!"
-  end
-
-  def run
-    "Time to run!"
-  end
-end
-
-# A sloth is a type of animal
-class Sloth < Animal
-  # Attribute accessors are a quick way to create methods that read or set a value
-  attr_accessor :name, :limbs, :fur_colour
-
-  def initialize(name)
-    @name = name
-    @limbs = 4
-    @fur_colour = "grey"
-  end
-
-  # This will override the run method in our Animal class
-  def run
-    "I don't know how to do that!"
-  end
-end
-
-
-# Cool! Now we have our classes, let's make a real sloth instance!
-craig = Sloth.new("Craig")
-puts "Yay, we just created a new sloth, #{craig.name}!"
-
-# Now let's find out some things about Craig
-puts "Is #{craig.name} an animal?: " + craig.animal?.to_s
-puts "Let's make #{craig.name} eat: " + craig.eat
-puts "Let's make #{craig.name} run: " + craig.run
-puts "#{craig.name} has this many limbs: " + craig.limbs.to_s
-puts "#{craig.name}'s fur colour is: " + craig.fur_colour
-puts ""
-
-# Now let's see what happens if we create a new Animal instance and call run
-some_generic_animal = Animal.new
-puts "Ooh, we just created a new generic animal that's too generic to have a name."
-puts "Let's make our generic animal run: " + some_generic_animal.run
-
-
-# WHEN WE RUN THIS, IT OUTPUTS:
-# Yay, we just created a new sloth, Craig!
-# Is Craig an animal?: true
-# Let's make Craig eat: Time to eat!
-# Let's make Craig run: I don't know how to do that!
-# Craig has this many limbs: 4
-# Craig's fur colour is: grey
-
-# Ooh, we just created a new generic animal that's too generic to have a name.
-# Let's make our generic animal run: Time to run!
 						</code></pre>
 					</section>
 				</section>
@@ -675,12 +704,6 @@ end
 						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
 					</section>
 					<section>
-						<p><strong>Congrats!</strong> You've made it speedily, in a very non-sloth-like fashion, to the end of this workshop! We've covered a bunch of topics and I don't expect you to be comfortable with all or any of them right now. The point of this is to get a taster for ruby, coding and understand it's not rocket science (most of the time) and a lot more about solving puzzles, organizing yourself and making an infinite world of ideas come to life.</p>
-						<p>
-							I added a lot more detail to the slides than necessary for this workshop so you have a handy basic reference to come back to. We'll end with some practice exercises we can do together now or you can tackle in your own time. If you have any questions about ruby/coding, working in tech, sloths or anything else, please throw them my way. Otherwise, <strong>happy hacking</strong>! :)
-						</p>
-					</section>
-					<section>
 						<h3>Your first method</h3>
 						<ol>
 							<li>Create a method named <code class="ruby">speak</code> or something you feel fits, that prints out "Oh hai world" when you call it.</li>
@@ -718,14 +741,31 @@ Fish: Oh hai world
 
 				<section>
 					<section>
-						<h2>Obligatory sloth GIF.</h2>
+						<h2>I think code is my new jam. What's Next?!</h2>
 						<br /><br />
 						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
 					</section>
 					<section>
-						<h3>Code brain explosion!</h3>
+						<h3>Pat yourself on the back.</h3>
+						<p>We've covered a bunch of topics, and even if you're still scratching your head about a lot of it, the point of this session is to get a taster for coding and understand it's not rocket science (most of the time) but a lot more about solving puzzles, organizing yourself and making an infinite world of ideas come to life.</p>
+						<p>
+							Most importantly, learning to code is no longer just for "programmers". Tech is so prominent in our world it's valuable for us all to understand our environment and feel enabled rather than paralysed by it. You've just unlocked a new life skill - well done!
+						</p>
+
+					</section>
+					<section>
+						<h3>Continue your code-ventures!</h3>
+						<p>
+							The best thing about learning to code is the fast-growing amount of free resources and support you can find from tech communities both online and in your local area. People all learn differently, so explore your options (there are many!) and find what works for you.</p>
+							<p><a href="https://github.com/krissy/ruby-for-sloths/wiki">I've curated a list of helpful resources to get you started on the <strong>ruby-for-sloths github wiki</strong>. Happy hacking!</a></p>
+						</p>
+					</section>
+					<section>
+						<h3>Obligatory sloth GIF!</h3>
 						<img data-src="img/fascinating_sloth.gif" alt="Code is fascinating">
 						<p>
+							 If you have any questions about ruby/coding, working in tech, sloths or anything else, please throw them my way.
+							 <br /><br />
 							<small>email me: <a href="mailto:kriselda.rabino@gmail.com">kriselda.rabino@gmail.com</a><br />tweet me: <a href="http://twitter.com/krissygoround">@krissygoround</a></small>
 						</p>
 					</section>
