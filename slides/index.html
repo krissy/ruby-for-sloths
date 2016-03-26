@@ -727,6 +727,20 @@ end
 puts "Some loud animals: " + loud_animals.join(" ")
 						</code></pre>
 					</section>
+					<section>
+						<h3>Bidding adieu with Blocks</h3>
+						<p>Last but not least are some neat things called <strong>blocks</strong>; those things wrapped in "do"s and "end"s or curly braces you've just seen in the last few slides. Blocks are like little roleplays written out for whatever actor is coming through the stage curtains (also known as pipes ||).</p>
+						<pre><code class="ruby">
+# Do a rocket countdown!
+5.downto(1) do |rocket_count|
+  puts rocket_count
+  puts "Lift off!" if rocket_count == 1
+end
+
+# Make animals moonwalk
+["sloth", "dugong", "koala"].each {|animal| puts animal.reverse }
+						</code></pre>
+					</section>
 				</section>
 
 				<!-- Exercise -->
