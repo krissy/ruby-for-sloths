@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>AcornHack Workshop – Learn to Code using Ruby (and sloths)</title>
+		<title>LEARN TO CODE using Ruby (and sloths) - Workshop by Kriselda Rabino</title>
 
 		<meta name="description" content="A coding/ruby introduction">
 		<meta name="author" content="Kriselda Rabino">
@@ -83,20 +83,50 @@
 						<br /><br />
 						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
 					</section>
+          <section>
+            <h3>A Language To Get Stuff Done</h3>
+            <p><strong>Programming languages</strong> - like Ruby, Python or PHP - help humans and machines communicate with each other.</p>
+            <p>They can be used to write <strong>programs</strong> which solve problems, make cool things (e.g. websites or gadgets) or email everyone daily sloth GIFs.</p>
+            <p>Computers are not as smart as humans (yet!), so in order to communicate with them we need to keep things straight forward and obvious, like a recipe book or instruction manual.</p>
+          </section>
+          <section>
+            <p>It's sort of like when your parents, spouse or flatmate ask you to "help around the house" - what does that even mean?</p>
+            <p>We really only understand once they're standing right in front of us an hour later, hands on hips, saying:</p>
+            <p><strong>"This bag of rubbish. You. Take it outside!"</strong>.</p>
+            <p>(Am I right or am I right?)</p>
+            <img data-src="img/akeem.jpg" width="500" alt="When you think of rubbish, think of weird programming analogies">
+          </section>
 					<section>
-						<p>Ruby is a <strong>programming language</strong> (like Python or PHP) that helps humans and machines communicate with each other.</p>
-					</section>
-					<section>
-						<p>It was created by a Japanese guy called Yukihiro Matsumoto. A guy so cool we all know him as "Matz". His aim is to provide a beautiful, readable language that makes programmers happy.</p>
+						<p><strong>Ruby</strong> was created by a Japanese guy called Yukihiro Matsumoto. A guy so cool we all know him as "Matz". His aim is to provide a beautiful, readable language that makes programmers happy.</p>
 						<img data-src="img/matzquote1.jpg" alt="Matz">
 					</section>
+          <section>
+            <p>It looks like this:</p>
+            <pre><code class="ruby">
+# Some code that will help us say hello when we call it
+def say_hello(name, creature)
+  if creature == :sloth
+    puts "Helloooo #{name}"
+  else
+    puts "Hello #{name}"
+  end
+end
+
+# Now we can print "Hello Craig"
+say_hello("Craig", :human)
+
+# Or we can print "Helloooo Craig" (like a sloth!)
+say_hello("Craig", :sloth)
+            </code></pre>
+            (Phew! Not so scary, right?)
+          </section>
 					<section>
 						<h3>Some common words you'll notice if you google "Ruby":</h3>
 
 						<table>
 							<tr>
 								<td width="40%">It's used on the <strong>back-end</strong></td>
-								<td>Alongside a server and a database, as opposed to "front-end" browser-based languages like HTML, CSS and JavaScript.</td>
+								<td>Alongside a server and/or database, as opposed to "front-end" browser-based languages like HTML, CSS and JavaScript.</td>
 							</tr>
 							<tr>
 								<td>It's a <strong>high-level</strong> language</td>
@@ -108,53 +138,28 @@
 							</tr>
 							<tr>
 								<td>It's <strong>dynamic</strong> and <strong>strongly</strong> typed</td>
-								<td>This is to do with how we create certain types of things and make different types of things talk to each other. We won't have time to go over this but if you're curious, google the difference between Static v Dynamic and Strong v Weak languages later on.</td>
+								<td>This refers to how we create things and make different types of things talk to each other. We won't have time to go over this but if you're curious, google the difference between Static v Dynamic and Strong v Weak languages later on.</td>
 							</tr>
 							<tr>
 								<td>It's super <strong>flexible</strong></td>
 								<td> Compared to other languages. Like marmite - people either love or hate this.</td>
 							</tr>
 						</table>
-
-						<!-- <ul>
-							<li>It's used on the <strong>"back-end"</strong> alongside a server and a database (as opposed to "front-end" browser-based languages like HTML, CSS and JavaScript)
-							<li>It's a <strong>high-level</strong> language (humans can read it good)
-							<li>It's <strong>object-oriented</strong> (we'll go over this in a bit)</li>
-							<li>It's <strong>dynamic</strong> and <strong>strongly</strong> typed (this is to do with how we create certain types of things and make different types of things talk to each other. We won't have time to go over this but if you're curious, google the difference between Static v Dynamic and Strong v Weak languages later on)
-							<li>It's super <strong>flexible</strong> compared to other languages. Like marmite - people either love or hate this</li>
-						</ul> -->
 					</section>
 					<section>
 						<h3>Is Ruby the same as Ruby On Rails?</h3>
 						<p>This is a very common misconception when first exploring the Ruby world.</p>
 						<p>An important thing to note about programming is a lot of people face the same problems every day, so programs have been built to help each other achieve these common tasks.</p>
-						<p><a href="http://rubyonrails.org">Rails</a> is a popular <strong>web framework</strong> made using the Ruby language. It provides the essential building blocks to create a modern web application. Some popular sites built with Rails include <a href="http://www.github.com">Github</a>, <a href="http://www.airbnb.com">Airbnb</a> and <a href="http://www.soundcloud.com">SoundCloud</a>.</p>
+						<p><a href="http://rubyonrails.org">Rails</a> is a popular <strong>web framework</strong> made using the Ruby language. It provides the essential building blocks to create a modern web application.</p>
+            <p>Some popular sites built with Rails include <a href="http://www.github.com">Github</a>, <a href="http://www.airbnb.com">Airbnb</a> and <a href="http://www.soundcloud.com">SoundCloud</a>!</p>
 					</section>
 					<section>
 						<h3>And finally, gems?</h3>
-						<p>As above, a good programmer tries not to reinvent the wheel. Ruby devs can choose to share their programs with the <a href="https://opensource.com/resources/what-open-source">open source</a> community by packaging up their programs into little reusable libraries called "gems". These can be installed by anyone to use on their machines or in their own programs. You can search for gems (including our friend, Rails) up on the gem hosting service <a href="https://rubygems.org/">RubyGems</a>.
+						<p>As above, a good programmer avoids reinventing the wheel.</p>
+            <p>Ruby devs can choose to share their programs with the <a href="https://opensource.com/resources/what-open-source">open source</a> community by packaging up their programs into little reusable libraries called "gems". These can be installed by anyone to use on their machines or in their own programs.</p>
+            <p>You can search for gems (including our friend, Rails) up on the gem hosting service <a href="https://rubygems.org/">RubyGems</a>.
 
 						</p>
-					</section>
-				</section>
-
-				<!-- WHAT'S A PROGRAM? -->
-				<section>
-					<section>
-						<h2>OK then, what's a program?</h2>
-						<br /><br />
-						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
-					</section>
-					<section>
-						<p>A program is something written to solve problems, make cool things or email everyone daily sloth GIFs. It reads like a set of instructions and ingredients/parts just like a recipe or manual.</p>
-					</section>
-					<section>
-						<p>Computers are not as smart as humans (yet!), so in order to communicate with them we need to keep things straight forward, broken down and obvious. This is why we need programming languages.</p>
-					</section>
-					<section>
-						<p>It's sort of like when your parents, spouse or flatmate ask you to "help around the house" - What does that even mean?</p>
-						<p>It's only when they're standing right in front of you an hour later, hands on hips saying "This bag of rubbish. You. Take it outside!". That's when the action happens, right?</p>
-						<img data-src="img/akeem.jpg" width="500" alt="When you think of rubbish, think of weird programming analogies">
 					</section>
 				</section>
 
@@ -166,16 +171,20 @@
 						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
 					</section>
 					<section>
-						<p>Good news! We won't need to fiddle around with any setup for the sake of this workshop as we'll be using the handy website <a href="http://tryruby.org/">tryruby.org</a> to play around. For reference, let's quickly go over what you'd usually have to do to get started coding with Ruby.</p>
+						<p>Good news! We won't need to fiddle around too much with setup for this workshop and we'll be using the handy website <a href="http://tryruby.org/">tryruby.org</a> to play around. For reference, let's quickly go over what you'd usually need to start coding with Ruby.</p>
 					</section>
 					<section>
 						<h3>Setting up Ruby on your machine</h3>
 						<p>There are different ways to install Ruby depending on your machine. If you're on a Mac, it comes with Ruby pre-installed, however, this is usually an older version and you're better off installing it fresh anyway. You can find out how to install Ruby via the <a href="https://www.ruby-lang.org/en/downloads/" target="_blank">official site</a>.</p>
 					</section>
+          <section>
+            <h3>The Command Line, your new hangout</h3>
+            <p>Say hi to your new minimalistic home: <strong>The Command Line!</strong> Remember, anything new always feels alien but you'll soon be using this enough for it to feel totally natural. Mac users can access this via their Terminal app. Windows users via the Command Prompt. <a href="https://www.codecademy.com/learn/learn-the-command-line" target="_blank">Here's a nice guide to brush up your command line skills in your own time.</a></p>
+            <img data-src="img/command_line.png" alt="The command line" />
+          </section>
 					<section>
 						<h3>The Interactive Ruby Shell (IRB)</h3>
 						<ul>
-							<li>Firstly, say hi to your new minimalistic yet friendly home: <strong>The Command Line!</strong> We'll be working in here a lot. Remember, anything new always feels alien so if you feel a bit intimidated by it, just be assured you'll soon be in here enough for it to feel totally natural.</li>
 							<li>IRB is a nice little interactive shell (type of user interface) that understands and interprets Ruby. To access it, open up your machine's command prompt/terminal and type in: <code>irb</code></li>
 							<li>The <a href="http://tryruby.org">tryruby.org</a> site basically provides us with this same space online in our browser, so let's switch to there now.</li>
 						</ul>
@@ -199,15 +208,15 @@
 >
 # Some words?
 >
-krissy
-	=> irb(main):001:0> krissy
-NameError: undefined local variable or method `krissy' for main:Object
 "hi, Krissy"
 	=> "hi, krissy"
 'Krissy' * 3
 	=> 'KrissyKrissyKrissy'
 "Krissy".upcase
 	=> "KRISSY"
+krissy
+  => irb(main):001:0> krissy
+NameError: undefined local variable or method `krissy' for main:Object
 						</code></pre>
 					</section>
 
@@ -221,6 +230,12 @@ NameError: undefined local variable or method `krissy' for main:Object
 						<small>Calling it on the command line:</small><br />
 						<img data-src="img/rubycode_output.png" alt="Ruby output">
 					</section>
+          <section>
+            <h3>Get a good code editor</h3>
+            <p>A nice chair, working stationery, a desk cactus - we all work better in the right environment with the essential tools around us.</p>
+            <p>Installing a good plain text editor is essential to kickstart your coding projects, ensuring no funny characters sneak into your files, helping you out by highlighting your code, auto-completion and much more.</p>
+            <p>There are many syntax editors out there but here are a few to get you started: <a href="http://www.sublimetext.com" target="_blank">Sublime Text</a>, <a href="http://www.atom.io" target="_blank">Atom</a>, <a href="http://macromates.com/" target="_blank">TextMate</a> or <a href="http://www.vim.org/" target="_blank">Vim</a> (for the real hackers).
+        </section>
 				</section>
 
 				<!-- ERRORS -->
@@ -271,6 +286,8 @@ NameError: undefined local variable or method `krissy' for main:Object
 						<p>They may look intimidating, but the fact is: <strong>Exceptions are your new BFFs!</strong></p>
 						<p>(Those brutally honest kinds of friends that tell you you've got food in your teeth, and point to the exact tooth.)</p>
 						<p>Welcome their advice. They're here to help you out.</p>
+
+            <img data-src="img/ugliest-skirt.gif" alt="Mean Girls - skirt">
 					</section>
 				</section>
 
@@ -284,10 +301,10 @@ NameError: undefined local variable or method `krissy' for main:Object
 
 						<section>
 						<h3>An Example Sloth Class</h3>
-						<p style="font-size: 0.7em">Here's a burst of code. Don't worry, it's as scared of you as you are of it. ;) If you have ruby installed, spend the next 10 minutes typing it up yourself (resist the urge to copy and paste!) in a file called <code>sloth.rb</code>. Save it in a directory of your choice. On the command line, type <code>ruby sloth.rb</code> in the same directory to run it. If you don't have ruby installed yet, just have a good read-through.</p>
+						<p style="font-size: 0.7em">Here's some code. Don't worry, it's as scared of you as you are of it! ;) Spend the next 10 minutes typing it up in your code editor (resist the urge to copy and paste) in a file called <code>sloth.rb</code>, saved in a directory of your choice. No need to type the comments (they're for you!). If you have ruby set up, type <code>ruby sloth.rb</code> on the command line to run it. If you don't have ruby installed yet, copy it to <a href="http://tryruby.org" target="_blank">tryruby.org</a> to run it.</p>
 
 						<pre><code class="ruby">
-# Let's make some classes!
+# 1. Let's make some classes! Starting with the generic Animal class
 class Animal
   def animal?
     true
@@ -302,52 +319,56 @@ class Animal
   end
 end
 
-# A sloth is a type of animal
+
+
+# 2. Now let's make a Sloth class, which is a type of Animal
 class Sloth < Animal
   # Attribute accessors are a quick way to create methods that read or set a value
-  attr_accessor :name, :limbs, :fur_colour
+  attr_accessor :name, :fur_colour
 
+  # Let's set our initial values
   def initialize(name)
     @name = name
-    @limbs = 4
+    @number_of_limbs = 4
     @fur_colour = "grey"
   end
 
   # This will override the run method in our Animal class
   def run
-    "I don't know how to do that!"
+    "I know I have #{@number_of_limbs} limbs, but I don't know how to do that!"
   end
 end
 
 
-# Cool! Now we have our classes, let's make a real sloth instance!
-craig = Sloth.new("Craig")
-puts "Yay, we just created a new sloth, #{craig.name}!"
 
-# Now let's find out some things about Craig
-puts "Is #{craig.name} an animal?: " + craig.animal?.to_s
-puts "Let's make #{craig.name} eat: " + craig.eat
-puts "Let's make #{craig.name} run: " + craig.run
-puts "#{craig.name} has this many limbs: " + craig.limbs.to_s
-puts "#{craig.name}'s fur colour is: " + craig.fur_colour
-puts ""
 
-# Now let's see what happens if we create a new Animal instance and call run
+# 3. Cool! Now we have our classes, let's make a real sloth instance!
+craig = Sloth.new("Craig Slothy McSlothFace")
+
+# -- Now let's find out some things about Craig:
+# -- Print "My sloth's name is Craig Slothy McSlothFace"
+puts "My sloth's name is #{craig.name}"
+
+# -- Print "Is he an animal? true"
+puts "Is he an animal?: " + craig.animal?.to_s
+
+# -- Print "Time to eat!"
+puts craig.eat
+
+# -- Print "I know I have 4 limbs, but I don't know how to do that!"
+puts craig.run
+
+# -- Print "Craig's fur colour is grey"
+puts "Craig's fur colour is: #{craig.fur_colour}"
+
+
+
+
+# 4. Now let's see what happens if we create a new Animal instance and call run
 some_generic_animal = Animal.new
-puts "Ooh, we just created a new generic animal that's too generic to have a name."
-puts "Let's make our generic animal run: " + some_generic_animal.run
 
-
-# WHEN WE RUN THIS, IT OUTPUTS:
-# Yay, we just created a new sloth, Craig!
-# Is Craig an animal?: true
-# Let's make Craig eat: Time to eat!
-# Let's make Craig run: I don't know how to do that!
-# Craig has this many limbs: 4
-# Craig's fur colour is: grey
-
-# Ooh, we just created a new generic animal that's too generic to have a name.
-# Let's make our generic animal run: Time to run!
+# -- Print "Time to run!"
+puts some_generic_animal.run
 						</code></pre>
 					</section>
 
@@ -641,12 +662,13 @@ puts "Hello" unless 1 == 1 # This will return 'nil' which is ruby's version of n
 				<!-- Loops -->
 				<section>
 					<section>
-						<h2>Iterating over collections (now it's getting a bit loopy)</h2>
+						<h2>Doing things over and over (now it's getting a bit loopy)</h2>
 						<br /><br />
 						<p><small>&#x25BC; <em>(scroll down)</em></small></p>
 					</section>
 					<section>
-						<p>Back to loving the lazy life, the maple syrup on the delicious stack of pancakes we called "Collections" come in the form of Loops aka Iterators. With these powers combined, we can do a bazillion things in one or a couple of lines. Yay!</p>
+						<p>Back to loving the lazy life- code makes our days so much easier by doing all our repetitive tasks for us. Thanks to our little syntax servants, we can do a bazillion things in one or a couple of lines. Yay!</p>
+            <img data-src="img/lazy_sloth_eat.gif" alt="Laziness">
 					</section>
 
 					<section>
@@ -685,13 +707,24 @@ end
 					</section>
 
 					<section>
-						<h3>Using "each"</h3>
-						<p>So as you can see, there are many ways to do the same thing. Ruby lets you take your pick and as mentioned earlier, coders either love or hate this freedom. (I'm on the love side!). Ruby peeps tend to use some ways more than others. The most popular way of looping is by using the <code>each</code> method on a collection (as well as some other useful methods from a nifty class called Enumerable)</p>
+						<h3>Using "each" and "map"</h3>
+						<p>As you can see, there are many ways to do the same thing. Rubyists tend to use some ways more than others. A popular looping method is calling <code>each</code> or <code>map</code> on a collection (some useful methods from a nifty class called Enumerable)</p>
 						<pre><code class="ruby">
 awesome_animals = ["sloth", "dugong", "koala"]
+
+# Use the each method to do something with each element in the array
 awesome_animals.each do |animal|
-	puts "#{animal}s rock!"
+  puts "#{animal}s rock!"
 end
+
+# Use the map method to change all elements in an array
+loud_animals = awesome_animals.map do |animal|
+  animal.upcase
+end
+
+# Use the join method to turn the array back into a string separated with spaces
+# Prints: "Some loud animals: SLOTH DUGONG KOALA"
+puts "Some loud animals: " + loud_animals.join(" ")
 						</code></pre>
 					</section>
 				</section>
@@ -710,11 +743,26 @@ end
 							<li>Pass through an argument to your method that represents an <code class="ruby">animal</code></li>
 							<li>Print out "Oh hai world" and mention the animal who said it. e.g.  output
 								<pre>
-"Bear: Oh hai, world!"
+"Bear: Oh hai world!"
 								</pre>
 							</li>
 						</ol>
 					</section>
+          <section>
+            <h3>Solution</h3>
+
+            <p>How'd you go? Go back to the previous slide or ask a friendly helper if you've got brain burn. Once you've attempted it, hit the <strong>down arrow key</strong> to check your answer:</p>
+
+            <pre class="fragment" data-fragment-index="1"><code class="ruby">
+# My method
+def speak(animal)
+  puts "#{animal.capitalize}: Oh hai world!"
+end
+
+# Print "Bear: Oh hai world!"
+speak("bear")
+            </code></pre>
+          </section>
 					<section>
 						<h3>And try these!</h3>
 						<ol>
@@ -729,6 +777,31 @@ Fish: Oh hai world
 
 						</ol>
 					</section>
+          <section>
+            <h3>Solution</h3>
+
+            <p>Moar confusez? Again, go back to the previous slides on arrays, conditional statements and loops or ask a friendly helper for assistance. Once you've attempted it, hit the <strong>down arrow key</strong> to check your answer:</p>
+
+            <pre class="fragment" data-fragment-index="1"><code class="ruby">
+# My method
+def speak(animals)
+  animals.each do |animal|
+    if (animal == "sloth")
+      puts "#{animal.capitalize}: Ohhhh haiiii worldddd!"
+    else
+      puts "#{animal.capitalize}: Oh hai world!"
+    end
+  end
+end
+
+# Print:
+# Bear: Oh hai world!
+# Sloth: Ohhhh haiiii worldddd!
+# Fish: Oh hai world!
+awesome_animals = ["bear", "sloth", "fish"]
+speak(awesome_animals)
+            </code></pre>
+          </section>
 					<section>
 						<h3>Bonus challenge!</h3>
 						<ol>
@@ -737,6 +810,44 @@ Fish: Oh hai world
 						</ol>
 						<p><em>(Hint: There are several things to think about here - break the problem down into single steps. Firstly, how would you split a sentence up into a group of words? Then how do you something to change each word? How do you extend the word? Use the slides, Google or a friendly fellow human to help you out if you're stuck!)</em></p>
 					</section>
+          <section>
+            <h3>Solution</h3>
+
+            <p>This one was quite tricky so congrats if you've made it this far! Once you've attempted it, hit the <strong>down arrow key</strong> to check your answer:</p>
+
+            <pre class="fragment" data-fragment-index="1"><code class="ruby">
+# My helper method
+def make_slothy_sentence(sentence)
+  # Turn the sentence string into an array using split
+  # Use the map method to transform each array element
+  # Remember the last element can be accessed by the array[-1] method
+  # Use the * operator to multiply the last letter by 3
+  # Finally use array.join() to turn the sentence back into a string
+  sentence.split.map do |word|
+    last_letter = word[-1]
+    word + last_letter*3
+  end.join(" ")
+end
+
+# My main method
+def speak(animals, sentence)
+  animals.each do |animal|
+    if animal == "sloth"
+      puts animal.capitalize + ": " + make_slothy_sentence(sentence)
+    else
+      puts animal.capitalize + ": " + sentence
+    end
+  end
+end
+
+# Print:
+# Bear: You're a coding machine
+# Sloth: You'reeee aaaa codingggg machineeee
+# Fish: You're a coding machine
+awesome_animals = ["bear", "sloth", "fish"]
+speak(awesome_animals, "You're a coding machine")
+            </code></pre>
+          </section>
 				</section>
 
 				<section>
@@ -747,9 +858,9 @@ Fish: Oh hai world
 					</section>
 					<section>
 						<h3>Pat yourself on the back.</h3>
-						<p>We've covered a bunch of topics, and even if you're still scratching your head about a lot of it, the point of this session is to get a taster for coding and understand it's not rocket science (most of the time) but a lot more about solving puzzles, organizing yourself and making an infinite world of ideas come to life.</p>
+						<p>We've covered a bunch of topics, and even if you're still scratching your head about a lot of it, the point of this session is to get a taster for coding and understand it's <strong>not rocket science</strong> (most of the time) but a lot more about <strong>solving puzzles, organizing yourself and making an infinite world of ideas come to life</strong>.</p>
 						<p>
-							Most importantly, learning to code is no longer just for "programmers". Tech is so prominent in our world it's valuable for us all to understand our environment and feel enabled rather than paralysed by it. You've just unlocked a new life skill - well done!
+							Most importantly, learning to code is no longer just for "programmers". Tech is so prominent in our world it's valuable for us all to understand our environment and feel enabled rather than paralysed by it. <strong>You've just unlocked a new life skill - well done!</strong>
 						</p>
 
 					</section>
@@ -757,7 +868,7 @@ Fish: Oh hai world
 						<h3>Continue your code-ventures!</h3>
 						<p>
 							The best thing about learning to code is the fast-growing amount of free resources and support you can find from tech communities both online and in your local area. People all learn differently, so explore your options (there are many!) and find what works for you.</p>
-							<p><a href="https://github.com/krissy/ruby-for-sloths/wiki">I've curated a list of helpful resources to get you started on the <strong>ruby-for-sloths github wiki</strong>. Happy hacking!</a></p>
+							<p><a href="https://github.com/krissy/ruby-for-sloths/wiki" target="_blank">I've curated a list of helpful resources to get you started on the <strong>ruby-for-sloths github wiki</strong>. Happy hacking!</a></p>
 						</p>
 					</section>
 					<section>
