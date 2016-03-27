@@ -399,17 +399,42 @@ puts some_generic_animal.run
 
 					<section>
 						<h3>Methods and Madness</h3>
-						<p>So if we have these objects, which are basically nouns, what are the things they do (i.e. their verbs)?. The rubyverse calls these: <strong>Methods</strong>! You've been using methods heaps already, e.g. when you called <code class="ruby">"hello".reverse</code>, <strong>reverse</strong> is a method available in the String object "hello". Let's create our own method now.</p>
+						<p>So if we have objects, i.e. nouns, what are the things they do (i.e. their verbs)? The rubyverse calls these: <strong>Methods</strong>! You've been using these heaps already, e.g. <strong>reverse</strong> is a method available on the String "hello". Let's create our own now.</p>
 
 						<pre><code class="ruby">
 # Our method takes something called an "argument" in brackets, and uses
 # that to get personal preferences from whoever/whatever called the method.
 def greet_like_a_sloth(name)
-	puts "Hai #{name}, I'mmmm aaaaa slothhhhh"
+  puts "Hai #{name}, I'mmmm aaaaa slothhhhh"
 end
 
 # Now try call your method!
 greet_like_a_sloth("Craig")
+
+# You can chain methods that belong to the same class
+# E.g. print "OLLEH"
+puts "Hello".reverse.upcase
+
+# A method performs actions within it and returns the last line
+# or the line with a return statement
+def be_a_sloth
+  name = "Craig"
+  speed = "slow"
+  "#{name} is #{speed}"
+end
+
+# Prints "Craig is slow"
+puts be_a_sloth
+
+def be_a_hyena
+  name = "Harriet"
+  return name
+  speed = "fast"
+  "#{name} is #{speed}"
+end
+
+# Prints "Harriet" and never runs the last 2 lines
+puts be_a_hyena
 						</code></pre>
 					</section>
 
